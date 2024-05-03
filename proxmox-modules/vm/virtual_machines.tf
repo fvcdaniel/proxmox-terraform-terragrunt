@@ -21,7 +21,7 @@ resource "proxmox_virtual_environment_vm" "vm" {
   }
 
   disk {
-    datastore_id = var. 
+    datastore_id = var.disk_datastore_id
     file_id      = proxmox_virtual_environment_file.debian_cloud_image.id
     # interface    = "scsi0"
     interface    = var.disk_interface
