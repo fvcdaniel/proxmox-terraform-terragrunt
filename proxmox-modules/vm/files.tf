@@ -4,9 +4,8 @@ resource "proxmox_virtual_environment_file" "debian_cloud_image" {
   node_name    = "pve"
 
   source_file {
-    path      = "https://cdimage.debian.org/images/cloud/bullseye/20221219-1234/debian-11-genericcloud-amd64-20221219-1234.qcow2"
-    file_name = "debian-11-genericcloud-amd64-20221219-1234.img"
-    checksum  = "ba0237232247948abf7341a495dec009702809aa7782355a1b35c112e75cee81"
+    path      = "https://cdimage.debian.org/images/cloud/bookworm/20240429-1732/debian-12-genericcloud-amd64-20240429-1732.qcow2"
+    file_name = "debian-12-genericcloud-amd64-20240429-1732.img"
   }
 }
 
@@ -16,6 +15,6 @@ resource "proxmox_virtual_environment_file" "cloud_config" {
   node_name    = "pve"
 
   source_file {
-    path = "/Users/cardoso/workspace-daniel/DevOps/proxmox-modules/vm/cloud-init/user-data.yml"
+    path = "./cloud-init/user-data.yml"
   }
 }
