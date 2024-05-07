@@ -15,6 +15,9 @@ resource "proxmox_virtual_environment_file" "cloud_config" {
   node_name    = "pve"
 
   source_file {
-    path = "./cloud-init/user-data.yml"
+    path = "${path.module}/cloud-init/user-data.yml"
   }
+}
+output "name" {
+  value = "${path.module}/cloud-init/user-data.yml"
 }
