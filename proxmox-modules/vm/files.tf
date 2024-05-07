@@ -18,6 +18,6 @@ resource "proxmox_virtual_environment_file" "cloud_config" {
     path = "${path.module}/cloud-init/user-data.yml"
   }
 }
-output "name" {
+output "file_path" {
   value = "${path.module}/cloud-init/user-data.yml"
 }
