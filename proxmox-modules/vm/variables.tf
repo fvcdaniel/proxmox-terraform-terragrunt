@@ -63,9 +63,3 @@ variable "vm_file_name" {
     default = "debian-12-genericcloud-amd64-20240429-1732.img"
   
 }
-
-variable "proxmox_provider_version" {
-    description = "The version of the Proxmox provider"
-    type        = string
-    default = "0.56.0"
-}
