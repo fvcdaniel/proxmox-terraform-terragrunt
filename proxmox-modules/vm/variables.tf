@@ -64,4 +64,8 @@ variable "vm_file_name" {
   
 }
 
-variable "proxmox_provider_version" {}
+variable "proxmox_provider_version" {
+    description = "The version of the Proxmox provider"
+    type        = string
+    default = "0.56.0"
+}
