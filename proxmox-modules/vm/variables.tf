@@ -17,7 +17,6 @@ variable "tags" {
 variable "node_name" {
     description = "The name of the node"
     type        = string
-    default = "pve"
 }
 
 variable "cpu_cores" {
@@ -42,13 +41,27 @@ variable "disk_interface" {
 variable "disk_size" {
     description = "The disk size in GB"
     type        = number
-    default = 32
-  
+    default = 32 
 }
 
 variable "disk_datastore_id" {
     description = "The datastore ID for the disk"
     type        = string
     default = "nvme"
+}
+
+variable "vm_path" {
+    description = "The path to the VM"
+    type        = string
+    default = "https://cdimage.debian.org/images/cloud/bookworm/20240429-1732/debian-12-genericcloud-amd64-20240429-1732.qcow2"
   
 }
+
+variable "vm_file_name" {
+    description = "The name of the VM file"
+    type        = string
+    default = "debian-12-genericcloud-amd64-20240429-1732.img"
+  
+}
+
+variable "proxmox_provider_version" {}
